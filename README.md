@@ -2,13 +2,13 @@
 
 # Notes
 
-add supabase key and url
+x add supabase key and url
 
 # Supabase
 
-Table: ID, created_at (date), description, complete (bool), user_id (foreign key)
-set up policies: user_id must match the authed user. add to USING EXPRESSION and WITH CHECK (uid() =user_id)
-add rows of data
+x Table: ID, created_at (date), description, complete (bool), user_id (foreign key)
+x set up policies: user_id must match the authed user. add to USING EXPRESSION and WITH CHECK (uid() =user_id)
+x add rows of data
 
 # Display To-Do Page
 
