@@ -2,9 +2,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20%;
     background-image: url('../assets/background.jpg');
-    height: 100px;
+    height: 400px;
     background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 30px;
+    /* min-height: 2000px; */
+    /* background-position: center; */
 }
 
 .complete {
