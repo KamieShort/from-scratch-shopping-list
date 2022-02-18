@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('../assets/background.jpg');
+    height: 100px;
+    background-repeat: no-repeat;
 }
 
 .complete {
