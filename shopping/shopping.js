@@ -11,7 +11,7 @@ import { renderItem } from '../render-utils.js';
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
-const form = document.querySelector('.list-form');
+const form = document.getElementById('item-form');
 const deleteButton = document.getElementById('delete');
 
 logoutButton.addEventListener('click', () => {
