@@ -1,9 +1,18 @@
-import { checkAuth, logout, fetchItems } from '../fetch-utils.js';
+import {
+    checkAuth,
+    logout,
+    fetchItems,
+    createItem,
+    completeItem,
+    deleteAllItems,
+} from '../fetch-utils.js';
 import { renderItem } from '../render-utils.js';
 
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
+const form = document.querySelector('.list-form');
+const deleteButton = document.getElementById('delete');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -24,3 +33,17 @@ async function renderItems() {
     }
 }
 renderItems();
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const item = data.get('item');
+    await createItem(item);
+    renderItems();
+    form.reset();
+});
+
+deleteButton.addEventListener('click', async () => {
+    await deleteAllItems();
+    renderItems();
+});

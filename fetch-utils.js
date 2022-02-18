@@ -55,3 +55,18 @@ export async function completeItem(id) {
         .match({ user_id: client.auth.user().id, id: id });
     return checkError(resp);
 }
+
+export async function createItem(item) {
+    const resp = await client
+        .from('shopping-list')
+        .insert({ description: item, complete: false, user_id: client.auth.user().id });
+    return checkError(resp);
+}
+
+export async function deleteAllItems() {
+    const resp = await client
+        .from('shopping-list')
+        .delete()
+        .match({ user_id: client.auth.user().id });
+    return checkError(resp);
+}

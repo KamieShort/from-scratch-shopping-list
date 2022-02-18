@@ -1,4 +1,4 @@
-
+/* 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     /* --color1: hsla(349, 69%, 76%, 1);
@@ -13,23 +13,23 @@ body {
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
     
-    --header-height: 80px;
+    /* --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
-}
-
+} */
+/* 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
-}
-
+} */
+/* 
 section {
     background-color: var(--color5);
     width: 1000px;
@@ -51,9 +51,9 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
-}
+} */
 
-h2 {
+/* h2 {
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -128,4 +128,3 @@ footer {
 
 .auth-container button {
     margin: 10px;
-}

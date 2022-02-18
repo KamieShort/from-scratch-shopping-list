@@ -18,11 +18,17 @@
 
     <body>
         <header>
-            <button id="logout">Logout</button>
+            <h3 id="header">Shopping List:</h3>
         </header>
         <main>
+            <button id="logout">Logout</button>
+            <form class="item-form">
+                <input name="item" required />
+                <button>Add Item</button>
+            </form>
             <ul id="item-list"></ul>
             <button id="delete">Delete All Items</button>
+            <div class="list-form"></div>
         </main>
         <script type="module" src="./shopping.js"></script>
     </body>
