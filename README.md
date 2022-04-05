@@ -1,26 +1,41 @@
-## The Golden Rule:
+## The Shopping List Plan
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+# Notes
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+x add supabase key and url
 
-## Making a plan
+# Supabase
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1. **For each HTML element ask: Why do I need this?**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1. **Think about how to validate each of your features according to a Definition of Done**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+x Table: ID, created_at (date), description, complete (bool), user_id (foreign key)
+x set up policies: user_id must match the authed user. add to USING EXPRESSION and WITH CHECK (uid() =user_id)
+x add rows of data
 
-Additional considerations:
+# Display To-Do Page
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+x should have user id (foreign key), and ID, completion status, description.
+Event Listeners: on load-fetch supabase data(window.eventlistener), on click complete To-Do, submit form-create to do, delete to-do's.
+
+Functions; fetch To-Dos and render to-Do's (loops through and appends). TDD render function.
+add CSS to show complete and not complete to-do
+
+# Creating new To-Do
+
+createToDo function in fetch-utils
+form.addEventListener that calls createToDo
+renderToDo to redisplay To-Dos.
+
+# Updating to-do
+
+completeToDo(id) function in fetch-utils
+update renderToDo's to add eventListener to each task to call completeToDo function
+call renderToDo's to redisplay
+
+# Delete To-Dos
+
+deleteToDos function in fetch-utils
+add eventListener to delete button (button.addEventListener)
+call renderToDos to redisplay
+
+# Questions
+
+X do we use our own supabase table? YES
